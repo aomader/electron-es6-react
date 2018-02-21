@@ -1,1 +1,7 @@
 node_modules
+
+# WebStorm Project File
+.idea
+
+# Electron-Packager Output
+packaged
