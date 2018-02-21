@@ -22,6 +22,13 @@ npm install
 npm start
 ```
 
+## Packaging
+
+```bash
+# after installation has completed
+npm package
+```
+
 [ES6]: http://exploringjs.com/
 [React]: https://facebook.github.io/react/
 [Electron]: http://electron.atom.io/
