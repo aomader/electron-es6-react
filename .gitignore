@@ -5,3 +5,6 @@ node_modules
 
 # Electron-Packager Output
 packaged
+
+# MacOS Folder DB
+.DS_Store

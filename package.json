@@ -4,9 +4,10 @@
   "main": "start.js",
   "license": "MIT",
   "repository": "b52/electron-es6-react",
+  "description": "This is a basic Electron ES6 React template",
   "scripts": {
     "start": "electron -r babel-register .",
-    "package": "electron-packager . --icon=assets/icon.icns --overwrite --out=packed --prune=true",
+    "package": "electron-packager . --icon=assets/mac/icon.icns --overwrite --out=packaged --prune=true",
     "postinstall": "electron-builder install-app-deps"
   },
   "dependencies": {
