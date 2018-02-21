@@ -2,4 +2,4 @@
 'use strict';
 
 require('babel-register');
-require('./main.js');
+require('./scripts/main.js');
