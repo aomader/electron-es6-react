@@ -1,0 +1,40 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Electron: Main",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+      "runtimeArgs": [
+        "-r", 
+        "@babel/register",
+        "--remote-debugging-port=9223",
+        "."
+      ],
+      "windows": {
+        "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd",
+      },
+      "program": "${workspaceRoot}/main.js",
+      "protocol": "inspector"
+    },
+    {
+      "name": "Electron: Renderer",
+      "type": "chrome",
+      "request": "attach",
+      "port": 9223,
+      "webRoot": "${workspaceFolder}/views",
+      "timeout": 30000
+    }
+  ],
+  "compounds": [
+      {
+          "name": "Electron: All",
+          "configurations": [
+              "Electron: Main",
+              "Electron: Renderer"
+          ]
+      }
+  ]
+}
