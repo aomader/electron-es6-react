@@ -22,6 +22,23 @@ npm install
 npm start
 ```
 
+## Debugging
+
+### With Chrome Developer Tools
+
+- `npm run brk`; 
+- Open `chrome://inspect` in Chrome Browser; 
+- Press "Configure" button and add `localhost:5858`; 
+- Then look to Remote Target section, there must applications link appears. Click it. This opens chrome developer tools;
+- In Dev Tools go to `Sources` tab and `Add (source) folder to workspace`. Add breakpoint and F8 (continue execution).
+
+### Vith Visual Studio Code
+
+Debug config `.vscode/launch.json` is taken from [vscode-recipes](https://github.com/Microsoft/vscode-recipes/tree/master/Electron).
+
+Electron application has main and rendering processes. Main executed in node environment and rendering - in browser. So there are two debug configurations in Debug panel (Ctrl+Shift+D) respectively: `Electron: Main` and `Electron: Renderer`. You can run Main and then attach Renderer or you can run both by choosing  `Electron: All` compound.
+
+
 [ES6]: http://exploringjs.com/
 [React]: https://facebook.github.io/react/
 [Electron]: http://electron.atom.io/

@@ -5,7 +5,8 @@
   "license": "MIT",
   "repository": "b52/electron-es6-react",
   "scripts": {
-    "start": "electron -r @babel/register ."
+    "start": "electron -r @babel/register .",
+    "brk": "electron -r @babel/register --inspect-brk=5858 ."
   },
   "dependencies": {
     "@babel/core": "^7.0.0-beta.42",
